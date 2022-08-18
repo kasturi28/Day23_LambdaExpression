@@ -9,18 +9,18 @@ import java.util.regex.Pattern;
  */
 public class UserRegistrationProgram {
 	/*
-	 * Defining lambda expression & pattern for last name If pattern matches then
-	 * printing last name is valid
+	 * Defining lambda expression & pattern for email If pattern matches then
+	 * printing email is valid
 	 */
 	public static void main(String[] args) {
 
-		userInput fn = (name) -> {
-			boolean check = Pattern.matches("([A-Z][a-z]{3,})", name);
-			if (check == true) {
-				System.out.println("Last name is Valid");
-			} else
-				System.out.println("Enter valid name");
-		};
-		fn.validUser("Pansare");
+		userInput fn = (email)->{
+            boolean check = Pattern.matches("^([a-z]{3}[.][a-z]{3}@[a-z]{2}[.][a-z]{2}[.][a-z]{2})$",email);
+            if (check == true) {
+                System.out.println("Email is Valid");
+            }else
+                System.out.println("Enter valid email");
+        };
+        fn.validUser("abc.xyz@bl.co.in");
 	}
 }
