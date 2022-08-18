@@ -9,18 +9,18 @@ import java.util.regex.Pattern;
  */
 public class UserRegistrationProgram {
 	/*
-	 * Defining lambda expression & pattern for email If pattern matches then
-	 * printing email is valid
+	 * Defining lambda expression & pattern for mobile number If pattern matches then
+	 * printing number is valid
 	 */
 	public static void main(String[] args) {
 
-		userInput fn = (email)->{
-            boolean check = Pattern.matches("^([a-z]{3}[.][a-z]{3}@[a-z]{2}[.][a-z]{2}[.][a-z]{2})$",email);
-            if (check == true) {
-                System.out.println("Email is Valid");
-            }else
-                System.out.println("Enter valid email");
-        };
-        fn.validUser("abc.xyz@bl.co.in");
+		userInput fn = (mobileNumber) -> {
+			boolean check = Pattern.matches("^([91]{2} [0-9]{10})$", mobileNumber);
+			if (check == true) {
+				System.out.println("Mobile number is Valid");
+			} else
+				System.out.println("Enter valid mobile number");
+		};
+		fn.validUser("91 8421731310");
 	}
 }
