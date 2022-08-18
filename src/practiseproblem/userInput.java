@@ -8,6 +8,6 @@ public interface userInput {
 	/*
 	 * Defining method valid user 
 	 */
-	 void validUser(String mobileNumber);
+	 void validUser(String password);
 }
 
